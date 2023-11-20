@@ -57,12 +57,31 @@ typedef struct {
     char broadcast[6];
 } info_repr;
 
+typedef struct {
+    int opcode;
+    void* (*create_req_data)(const char*);
+    void (*manage_reply_data)(char*, struct nlmsghdr*, ssize_t);
+} operation_mode;
+
 size_t get_flag_string_from_flags(unsigned, char*);
 void print_mac_address(const char*);
 void print_info_repr(const info_repr*);
-int show_bridges();
-int add_bridge(const char*);
-int delete_bridge(const char*);
 void print_usage_description();
+int show_bridges();
+
+int create_socket();
+
+nl_req_show_t* create_req_show_data(const char*);
+nl_req_add_t* create_req_add_data(const char*);
+nl_req_del_t* create_req_del_data(const char*);
+
+void manage_show_reply_data(char*, struct nlmsghdr*, ssize_t);
+void manage_add_reply_data(char*, struct nlmsghdr*, ssize_t);
+void manage_del_reply_data(char*, struct nlmsghdr*, ssize_t);
+
+void* create_req(int, const char*);
+void manage_data(int, char*, struct nlmsghdr*, ssize_t);
+
+int operate(int, const char*);
 
 #endif // UTILITY_H
