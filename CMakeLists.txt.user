@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 7.0.2, 2023-11-20T18:21:14. -->
+<!-- Written by QtCreator 7.0.2, 2023-11-21T23:40:07. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -297,7 +297,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">bridge_utility</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.bridge_utility</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">bridge_utility</value>
-    <value type="QString" key="RunConfiguration.Arguments">delbr bridge139 1</value>
+    <value type="QString" key="RunConfiguration.Arguments">delif br123 ens33</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
