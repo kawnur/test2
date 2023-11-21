@@ -383,7 +383,7 @@ void handle_show_reply_data(char *buf, struct nlmsghdr *nh, ssize_t recv_len) {
 
 
 // TODO create named constants equal operation modes
-operation_mode mode_array[7] = {
+operation_mode mode_array[6] = {
     {
         // show bridges
         .mode = 1,
