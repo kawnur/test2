@@ -1,9 +1,9 @@
 To build project run following commands from source dir:
 
 mkdir ../build && cd ../build
-cmake ../test2                                      # use source dir path
+cmake ../test2                                      # use source dir path as parameter
 cmake --build .
 
-Now you can run appwith command:
+Now you can run app with command:
 
 ./bridge_utility
