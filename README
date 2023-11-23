@@ -1,4 +1,4 @@
-To build project run following commands from source dir:
+To build project run following commands starting from source dir:
 
 mkdir ../build && cd ../build
 cmake ../test2                                      # use source dir path as parameter
