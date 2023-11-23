@@ -16,6 +16,8 @@
 #include <unistd.h>
 
 
+#define FLAGS_STRING_SIZE 256
+
 typedef struct {
     struct rtattr attr;
     int data;

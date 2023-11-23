@@ -27,7 +27,7 @@ size_t get_flag_string_from_flags(unsigned flags, char* result) {
         { .flag = IFF_DYNAMIC, .value = "DYNAMIC" },
     };
 
-    char flags_str[] = "<";
+    char flags_str[FLAGS_STRING_SIZE] = "<";
     size_t arr_size = sizeof(flag_value_array) / sizeof(flag_value_array[0]);
 
     for(int i = 0; i < arr_size; i++) {
@@ -37,8 +37,10 @@ size_t get_flag_string_from_flags(unsigned flags, char* result) {
         }
     }
 
-    flags_str[strlen(flags_str) - 2] = '>';
-    flags_str[strlen(flags_str) - 1] = 0x0;
+    size_t length = strlen(flags_str);
+
+    flags_str[length - 2] = '>';
+    flags_str[length - 1] = 0x0;
 
     strcpy(result, flags_str);
 
@@ -53,7 +55,7 @@ void print_mac_address(const char *address) {
 }
 
 void print_info_repr(const info_repr *info) {
-    char flag_string[256] = {0};
+    char flag_string[FLAGS_STRING_SIZE] = {0};
     get_flag_string_from_flags(info->flags, flag_string);
 
     printf("%s: ", info->name);

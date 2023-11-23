@@ -1,7 +1,10 @@
 To build project run following commands starting from source dir:
 
 mkdir ../build && cd ../build
-cmake ../test2                                      # use source dir path as parameter
+
+# use source dir path as parameter
+cmake ../test2
+
 cmake --build .
 
 Now you can run app with command:
